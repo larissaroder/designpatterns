@@ -1,4 +1,6 @@
-package budget;
+package budget.tax;
+
+import budget.Budget;
 
 public class ISS implements Tax {
 

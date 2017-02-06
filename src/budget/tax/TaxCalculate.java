@@ -1,4 +1,6 @@
-package budget;
+package budget.tax;
+
+import budget.Budget;
 
 /**
  * Created by Larissa on 19/01/2017.
