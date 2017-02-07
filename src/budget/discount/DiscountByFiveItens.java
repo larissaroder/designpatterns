@@ -19,8 +19,8 @@ public class DiscountByFiveItens implements Discount{
 	}
 
 	@Override
-	public void nextDiscount(Discount next) {
+	public void nextDiscount(Object next) {
 
-		this.next = next;
+		this.next = (Discount) next;
 	}
 }

@@ -13,6 +13,7 @@ public class NotDiscount implements Discount {
 	}
 
 	@Override
-	public void nextDiscount(Discount next) {
+	public void nextDiscount(Object next) {
+
 	}
 }
