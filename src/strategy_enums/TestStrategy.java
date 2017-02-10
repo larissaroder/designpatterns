@@ -1,11 +1,20 @@
 package strategy_enums;
 
-/**
- * Created by Larissa on 06/02/2017.
- */
+import org.junit.Assert;
+import org.junit.Test;
+
 public class TestStrategy {
 
-	public static void main(String[] args) {
-		System.out.println(Math.ADD.execute(5,4));
+	@Test
+	public void testStrategy() {
+		Integer sum = Math.ADD.get(2,2);
+		Assert.assertSame(sum, 4);
+
+		Integer sub = Math.SUBTRACT.get(2,2);
+		Assert.assertSame(sub, 0);
+
+		Integer mult = Math.ADD.get(2,2);
+		Assert.assertSame(mult, 4);
 	}
+
 }

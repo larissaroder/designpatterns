@@ -1,30 +1,23 @@
 package strategy_enums;
 
-/**
- * Created by Larissa on 06/02/2017.
- */
-enum Math implements Strategy {
+enum Math {
 
-	ADD {
+	ADD ((a,b) -> a+b),
+	SUBTRACT ((a,b) -> a-b),
+	MULTIPLY ((a,b) -> a*b);
 
-		@Override
-		public Integer execute(int a, int b) {
-			return a + b;
-		}
-	},
-	SUBTRACT {
+	private GetType<Integer> getter;
 
-		@Override
-		public Integer execute(int a, int b) {
-			return a - b;
-		}
-	},
-	MULTIPLY {
+	private Math(GetType<Integer> getter) {
+		this.getter = getter;
+	}
 
-		@Override
-		public Integer execute(int a, int b) {
-			return a * b;
-		}
-	};
+	interface GetType<T>{
+		T get(Integer a, Integer b);
+	}
+
+	public Integer get(Integer x, Integer y) {
+		return getter.get(x, y);
+	}
 }
 
